@@ -14,6 +14,7 @@
 const express=require('express')
 const request = require('request')
 const app = express()
+const port = process.env.PORT || 3000
 
 app.get('/help',(req,res)=>{
     console.log(req.query);
@@ -56,4 +57,4 @@ app.get('/weather',async(req,res)=>{
 
 
 
-app.listen(3000,()=>console.log('👩👩'))
+app.listen(port,()=>console.log('👩👩'+port))
